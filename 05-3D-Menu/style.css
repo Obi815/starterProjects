@@ -1,0 +1,48 @@
+/* reset all the common web browser styles  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* decreasing the size of html document */
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* displaying content in center vertically */
+    display: flex;
+    align-items: center;
+    background-color: #030a1b;
+}
+
+.menu {
+    width: 100%;
+    /* creating space on left and right side using padding  */
+    padding: 0 25rem;
+    display: flex;
+    /* using justify-content to space content evenly */
+    justify-content: space-evenly;
+}
+
+.menu-item {
+    width: 20rem;
+    height: 15rem;
+    background-color: #5588dd;
+    /* this centers the icons in the middle of the boxes  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius makes the boxes more rounded than sharp */
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 2rem rgba(100, 100, 255, .4);
+}
+
+.menu-item i {
+    font-size: 7rem;
+    color: #222;
+}
