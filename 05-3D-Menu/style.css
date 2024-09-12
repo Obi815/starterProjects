@@ -32,6 +32,12 @@ html {
     transform-style: preserve-3d;
 }
 
+/* this is what is going to be called from the scripts file  */
+.change.menu .menu-item {
+    transform: rotateY(0) rotateX(0) translateX(0) translateY(0) translateZ(0);
+    opacity: 1;
+}
+
 .menu-item {
     width: 20rem;
     height: 15rem;
@@ -44,7 +50,13 @@ html {
     border-radius: 1rem;
     cursor: pointer;
     box-shadow: 0 0 2rem rgba(100, 100, 255, .4);
-    opacity: .6;
+}
+
+/* changing the background color when you hover  */
+.menu-item:hover {
+    background-color: #ccccff;
+    box-shadow: 0 0 3rem rgba(100, 100, 255, .6);
+
 }
 
 .menu-item:not(.center-item) {
@@ -56,25 +68,45 @@ html {
 /* this will make the icon have a transistion when you hover/click on the home button  */
 .menu-item:nth-child(1) {
     transform: rotateY(-70deg) rotateX(20deg) translateX(-50rem) translateY(-15rem) translateZ(-50rem);
+    /* the transition: transform; in nth-child 1-5 is for the transition we added in the scripts file  */
+    transition: transform 1.2s ease-in, opacity 1s ease-in, background-color .5s,
+        box-shadow .5s;
+
 }
 
 .menu-item:nth-child(2) {
     transform: rotateY(-70deg) rotateX(20deg) translateX(-20rem) translateY(-5rem) translateZ(-20rem);
+    transition: transform 1s ease-in, opacity 1s ease-in, background-color .5s,
+        box-shadow .5s;
 }
 
 .menu-item:nth-child(3) {
     transform: rotateX(20deg);
+
+    transition: tranform 1s ease-in, background-color .5s,
+        box-shadow .5s;
+
 }
 
 .menu-item:nth-child(4) {
     transform: rotateY(70deg) rotateX(20deg) translateX(20rem) translateY(-5rem) translateZ(-20rem);
+    transition: transform 1s ease-in, opacity 1s ease-in, background-color .5s,
+        box-shadow .5s;
 }
 
 .menu-item:nth-child(5) {
     transform: rotateY(70deg) rotateX(20deg) translateX(50rem) translateY(-15rem) translateZ(-50rem);
+    transition: transform 1.2s ease-in, opacity 1s ease-in, background-color .5s,
+        box-shadow .5s;
 }
 
 .menu-item i {
     font-size: 7rem;
     color: #222;
+    transition: color .5s;
+}
+
+.menu-item:hover i {
+    color: #6464ff;
+
 }
