@@ -77,10 +77,44 @@ html {
     height: 7rem;
     background-color: #efd81d;
     position: absolute;
+    opacity: .8;
+    /* this is adding the little shadow around the box  */
+    box-shadow: 0.1rem 0.1rem 0.1rem #eee inset,
+        -0.1rem -0.1rem 0.1rem #eee inset,
+        0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2),
+        -0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2);
 }
 
 .top-side {
-    transform: rotateX(90deg) translateZ(35rem);
+    transform: rotateX(90deg) translateZ(3.5rem);
     /*temporary */
-    background-color: red;
+}
+
+.bottom-side {
+    transform: rotateX(90deg) translateZ(-3.5rem);
+    /*temporary */
+}
+
+.front-side {
+    transform: translateZ(3.5rem);
+    /*temporary */
+}
+
+.back-side {
+    transform: translateZ(-3.5rem);
+    /*temporary */
+}
+
+.right-side {
+    transform: rotateY(90deg) translateX(3.5rem);
+    transform-origin: right;
+    /*temporary */
+
+}
+
+.left-side {
+    transform: rotateY(90deg) translateX(-3.5rem);
+    transform-origin: left;
+    /*temporary */
+
 }
