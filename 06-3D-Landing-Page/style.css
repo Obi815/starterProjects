@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* makes the content on the page smaller and fit on the page better */
+html {
+    font-size: 62.5%;
+}
+
+/* so we don't have repeat code we can use this to style everything at once  */
+.center {
+    /* centering the container  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(127, 86, 167);
+
+}
+
+.header {
+    width: 40%;
+    height: 100%;
+    /* changing the direction the content will be flexed  */
+    flex-direction: column;
+    /* this aligns the content more to the left  */
+    align-items: flex-start;
+}
+
+.heading {
+    font-size: 4rem;
+    color: white;
+    font-weight: 200;
+    letter-spacing: .1rem;
+}
+
+.heading span {
+    font-size: 4rem;
+    color: #efd81d;
+}
+
+.btn {
+    width: 15rem;
+    height: 4rem;
+    background-color: #efd81d;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .1rem;
+    /* getting rid of the defualt border  */
+    border: none;
+    margin-top: 3.5rem;
+}
+
+.boxes {
+    width: 40%;
+    height: 100%;
+    /* part of making a 3D environment */
+    perspective: 150rem;
+}
+
+.box {
+    transform-style: preserve-3d;
+    transform: rotateY(40deg) rotateX(30deg);
+}
+
+/* selecting all the "class = box" to style  */
+.box div {
+    width: 7rem;
+    height: 7rem;
+    background-color: #efd81d;
+    position: absolute;
+}
+
+.top-side {
+    transform: rotateX(90deg) translateZ(35rem);
+    /*temporary */
+    background-color: red;
+}
