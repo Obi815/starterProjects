@@ -70,42 +70,60 @@ html {
     transform-style: preserve-3d;
     transform: rotateY(40deg) rotateX(30deg);
     position: relative;
+    display: flex;
+    /* Getting the boxes to rotate in place  */
+    justify-content: center;
+    align-items: center;
 }
 
 /* this is where I position all the boxes to their respective positions  */
 .box-1 {
     left: -25rem;
     top: -6rem;
+    /* getting the animation moving for each box */
+    animation: boxAnim 100s infinite linear;
 }
 
 .box-2 {
     left: -11rem;
     top: -23rem;
+    /* getting the animation moving for each box */
+    animation: boxAnim 100s -10s infinite linear;
 }
 
 .box-3 {
     left: 10rem;
     top: -23rem;
+    /* getting the animation moving for each box */
+    animation: boxAnim 100s -20s infinite linear;
 }
 
 .box-4 {
     left: 25rem;
     top: -6rem;
+    /* getting the animation moving for each box */
+    animation: boxAnim 100s -30s infinite linear;
 }
 
 .box-5 {
     left: 22rem;
     top: 13rem;
+    /* getting the animation moving for each box */
+    animation: boxAnim 100s -40s infinite linear;
 }
 
 .box-6 {
     left: 0;
     top: 25rem;
+    /* getting the animation moving for each box */
+    animation: boxAnim 100s -50s infinite linear;
 }
 
 .box-7 {
     left: -21rem;
     top: 14rem;
+    /* getting the animation moving for each box */
+    animation: boxAnim 100s -60s infinite linear;
 }
 
 /* this is where I position all the boxes to their respective positions Ended  */
@@ -121,6 +139,18 @@ html {
         -0.1rem -0.1rem 0.1rem #eee inset,
         0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2),
         -0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2);
+}
+
+@keyframes boxAnim {
+
+    /* trying to get the box rotation animation */
+    0% {
+        transform: rotateX(0) rotateY(0)rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg)rotateZ(360deg);
+    }
 }
 
 /* Styles for the indvidual box colors  */
