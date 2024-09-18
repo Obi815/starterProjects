@@ -2,17 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-/* makes the content on the page smaller and fit on the page better */
 html {
     font-size: 62.5%;
 }
 
-/* so we don't have repeat code we can use this to style everything at once  */
 .center {
-    /* centering the container  */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,28 +19,26 @@ html {
     width: 100%;
     height: 100vh;
     background-color: rgb(127, 86, 167);
-
 }
 
 .header {
     width: 40%;
     height: 100%;
-    /* changing the direction the content will be flexed  */
     flex-direction: column;
-    /* this aligns the content more to the left  */
     align-items: flex-start;
 }
 
 .heading {
     font-size: 4rem;
-    color: white;
+    color: #fff;
     font-weight: 200;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }
 
 .heading span {
     font-size: 4rem;
     color: #efd81d;
+    transition: color 0.2s;
 }
 
 .btn {
@@ -52,17 +47,17 @@ html {
     background-color: #efd81d;
     font-size: 1.4rem;
     text-transform: uppercase;
-    color: white;
-    letter-spacing: .1rem;
-    /* getting rid of the defualt border  */
+    color: #fff;
+    letter-spacing: 0.1rem;
     border: none;
     margin-top: 3.5rem;
+    transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .boxes {
     width: 40%;
     height: 100%;
-    /* part of making a 3D environment */
     perspective: 150rem;
 }
 
@@ -77,89 +72,80 @@ html {
     transform: rotateY(45deg) rotateX(30deg);
     position: relative;
     display: flex;
-    /* Getting the boxes to rotate in place  */
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
-/* this is where I position all the boxes to their respective positions  */
+@keyframes boxAnim {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
 .box-1 {
     left: -25rem;
     top: -6rem;
-    /* getting the animation moving for each box */
     animation: boxAnim 100s infinite linear;
 }
 
 .box-2 {
     left: -11rem;
     top: -23rem;
-    /* getting the animation moving for each box */
     animation: boxAnim 100s -10s infinite linear;
 }
 
 .box-3 {
     left: 10rem;
     top: -23rem;
-    /* getting the animation moving for each box */
     animation: boxAnim 100s -20s infinite linear;
 }
 
 .box-4 {
     left: 25rem;
     top: -6rem;
-    /* getting the animation moving for each box */
     animation: boxAnim 100s -30s infinite linear;
 }
 
 .box-5 {
     left: 22rem;
     top: 13rem;
-    /* getting the animation moving for each box */
     animation: boxAnim 100s -40s infinite linear;
 }
 
 .box-6 {
     left: 0;
     top: 25rem;
-    /* getting the animation moving for each box */
     animation: boxAnim 100s -50s infinite linear;
 }
 
 .box-7 {
     left: -21rem;
     top: 14rem;
-    /* getting the animation moving for each box */
     animation: boxAnim 100s -60s infinite linear;
 }
 
-/* this is where I position all the boxes to their respective positions Ended  */
+.active.box div {
+    width: 16rem;
+    height: 16rem;
+    transition: all 0.2s 0.5s ease-in-out;
+}
 
-/* selecting all the "class = box" to style  */
 .box div {
     width: 7rem;
     height: 7rem;
     position: absolute;
-    opacity: .8;
-    /* this is adding the little shadow around the box  */
-    box-shadow: 0.1rem 0.1rem 0.1rem #eee inset,
-        -0.1rem -0.1rem 0.1rem #eee inset,
+    opacity: 0.8;
+    box-shadow: 0.1rem 0.1rem 0.1rem #eee inset, -0.1rem -0.1rem 0.1rem #eee inset,
         0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2),
-        -0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2);
+        -0.1rem -0.1rem 3.5rem rgba(255, 255, 255, 0.2);
 }
 
-@keyframes boxAnim {
-
-    /* trying to get the box rotation animation */
-    0% {
-        transform: rotateX(0) rotateY(0)rotateZ(0);
-    }
-
-    100% {
-        transform: rotateX(360deg) rotateY(360deg)rotateZ(360deg);
-    }
-}
-
-/* Styles for the indvidual box colors  */
 .box-1 div {
     /* JS */
     background-color: #efd81d;
@@ -176,57 +162,73 @@ html {
 }
 
 .box-4 div {
-    /* Angular JS */
+    /* Angular */
     background-color: #b52e31;
 }
 
 .box-5 div {
-    /* Node JS */
-    background-color: #dcd5d5;
+    /* Node */
+    background-color: #43853d;
 }
 
 .box-6 div {
-    /* Vue */
+    /* Sass */
     background-color: #cf649a;
 }
 
 .box-7 div {
-    /* Vue */
-    background-color: #f08f18;
+    /* Ember */
+    background-color: #e04e39;
 }
-
-/* Styles for the indvidual box colors Ended */
 
 .top-side {
     transform: rotateX(90deg) translateZ(3.5rem);
-    /*temporary */
 }
 
 .bottom-side {
     transform: rotateX(90deg) translateZ(-3.5rem);
-    /*temporary */
 }
 
 .front-side {
     transform: translateZ(3.5rem);
-    /*temporary */
 }
 
 .back-side {
     transform: translateZ(-3.5rem);
-    /*temporary */
 }
 
 .right-side {
-    transform: rotateY(90deg) translateX(3.5rem);
+    transform: rotateY(-90deg) translateX(3.5rem);
     transform-origin: right;
-    /*temporary */
-
 }
 
 .left-side {
     transform: rotateY(90deg) translateX(-3.5rem);
     transform-origin: left;
-    /*temporary */
+}
 
+.active .top-side {
+    transform: rotateX(90deg) translateZ(8rem);
+}
+
+.active .bottom-side {
+    transform: rotateX(90deg) translateZ(-8rem);
+}
+
+.active .front-side {
+    transform: translateZ(8rem);
+}
+
+.active .back-side {
+    transform: translateZ(-8rem);
+}
+
+.active .right-side {
+    transform: rotateY(-90deg) translateX(8rem);
+    transform-origin: right;
+}
+
+.active .left-side {
+    transform: rotateY(90deg) translateX(-8rem);
+    transform-origin: left;
 }
