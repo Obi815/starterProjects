@@ -4,13 +4,14 @@
     font-family: Quicksand, sans-serif;
 }
 
-html {}
-
 .container {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(53, 82, 66, 0.5), rgba(47, 80, 63, 0.6)), url(images/bg.jpg) center no-repeat;
+    background: linear-gradient(rgba(53, 82, 66, 0.5),
+            rgba(47, 80, 63, 0.6)), url(images/bg.jpg) center no-repeat;
     background-size: cover;
+    overflow: hidden;
+    position: relative;
 }
 
 .banner {
@@ -27,6 +28,8 @@ html {}
     color: #ddd;
     font-weight: 300;
     margin-bottom: 30px;
+    animation-name: moveToLeft;
+    animation-duration: 2s;
 }
 
 .banner span {
@@ -40,6 +43,8 @@ html {}
     font-weight: 300;
     color: #eee;
     margin-bottom: 20px;
+    animation-name: moveToRight;
+    animation-duration: 2s;
 }
 
 .banner button {
@@ -57,9 +62,51 @@ html {}
 .btn-left {
     background-color: #eee;
     color: #444;
+    animation-name: animateBtn;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
 }
 
 .btn-right {
     background-color: transparent;
     color: #eee;
+    animation-name: animateBtn;
+    animation-duration: 1s;
+    animation-delay: 2.3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveToLeft {
+    0% {
+        transform: translateX(120px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes animateBtn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
