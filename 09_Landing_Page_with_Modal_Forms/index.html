@@ -22,21 +22,26 @@
         </div>
         <!-- button codes -->
         <div class="btns">
-            <div class="btn login-btn">Login</div>
-            <div class="btn signup-btn">Sign Up</div>
+            <button class="btn login-btn">Login</button>
+            <button class="btn signup-btn">Sign Up</button>
         </div>
-        <div class="form-container">
+        <!-- container will hold the sign up and login in content  -->
+        <div class="form-container" hidden>
+            <!-- markup for sign up section of the page  -->
             <div class="signup-form-wrapper modal">
                 <div class="x-btn signup-x">
                     &times;
                 </div>
+                <!-- header for the section  -->
                 <div class="form-header">
                     <h1>CodeAndCreate</h1>
                     <h3>Join Us</h3>
                 </div>
                 <form action="" class="form">
                     <div class="input-group">
+                        <!-- icons from font font-awesome -->
                         <i class="fas fa-user"></i>
+                        <!-- form input for user interaction -->
                         <input type="text" placeholder="Username">
                     </div>
                     <div class="input-group">
@@ -50,10 +55,13 @@
                     <button type="button">Sign Up</button>
                 </form>
             </div>
+
+            <!-- mark up for the login section of the page  -->
             <div class="login-form-wrapper modal">
                 <div class="x-btn login-x">
                     &times;
                 </div>
+                <!-- header for the section  -->
                 <div class="form-header">
                     <h1>CodeAndCreate</h1>
                     <h3>Log in</h3>
