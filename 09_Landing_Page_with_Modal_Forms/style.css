@@ -86,6 +86,23 @@
     transform: translateY(0px);
 }
 
+.form-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+.disable {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* styles for smaller CodeAndCreate form  */
 .modal {
     width: 400px;
@@ -97,6 +114,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+/* for the javaScript  */
+.display {
+    opacity: 1;
+    visibility: visible;
 }
 
 .x-btn {
