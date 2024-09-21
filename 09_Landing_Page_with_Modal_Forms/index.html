@@ -5,10 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Landing Page With Modal Forms</title>
 </head>
 
 <body>
+    <div class="container">
+        <!-- creating three different sections  -->
+        <!-- This first one is the banner you will see  -->
+        <div class="banner-text">
+            <h1>CodeAndCreate</h1>
+            <p>Learn how to code</p>
+        </div>
+        <!-- button codes -->
+        <div class="btns">
+            <div class="btn login-btn">Login</div>
+            <div class="btn signup-btn">Sign Up</div>
+        </div>
+        <div class="form-container">
+            <div class="signup-form-wrapper modal">
+                <div class="x-btn signup-x">
+                    &times;
+                </div>
+                <div class="form-header">
+                    <h1>CodeAndCreate</h1>
+                    <h3>Join Us</h3>
+                </div>
+                <form action="" class="form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-key"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button type="button">Sign Up</button>
+                </form>
+            </div>
+            <div class="login-form-wrapper modal">
+                <div class="x-btn login-x">
+                    &times;
+                </div>
+                <div class="form-header">
+                    <h1>CodeAndCreate</h1>
+                    <h3>Log in</h3>
+                </div>
+                <form action="" class="form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-key"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button type="button">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
