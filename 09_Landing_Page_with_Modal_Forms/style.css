@@ -61,4 +61,129 @@
     letter-spacing: 1px;
     outline: none;
     cursor: pointer;
+    color: white;
+    border: 2px solid tomato;
+    /* for btn:hover to make little effect  */
+    transition: transform .3s;
+}
+
+.login-btn {
+    background-color: tomato;
+
+}
+
+.signup-btn {
+    background-color: transparent;
+}
+
+/* adding little effect to the button  */
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* when btn is clicked it returns back to original position */
+.btn:active {
+    transform: translateY(0px);
+}
+
+/* styles for smaller CodeAndCreate form  */
+.modal {
+    width: 400px;
+    background: linear-gradient(rgba(148, 42, 42, .8),
+            rgba(185, 129, 129, .6)), url(images/bg.jpg) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.x-btn {
+    position: absolute;
+    right: 20px;
+    font-size: 50px;
+    color: #222;
+    cursor: pointer;
+}
+
+/* small form header styles */
+.form-header {
+    text-align: center;
+    margin: 80px, 0, 150px, 0;
+    color: white;
+}
+
+/* CodeAndCreate styles sizes, weight, space bottom */
+.form-header h1 {
+    font-family: 'SUSE', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* 'Join Us' styled. sizes, spacing bottom, weight */
+.form-header h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.input-group input {
+    width: 250px;
+    padding: 15px 15px 15px 50px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.input-group i {
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.form button {
+    width: 310px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: #d867d8;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 10px 0 50px 0;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form button:active {
+    transform: translateY(0px);
 }
